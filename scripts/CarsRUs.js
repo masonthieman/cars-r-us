@@ -17,7 +17,7 @@ export const CarsRUs = () => {
             <section class="choices__technologies options">
                 ${Technologies()}
             </section>
-            section class="choices__wheels options"> 
+            <section class="choices__wheels options"> 
                 ${Wheels()}
             </section>
         </article>`

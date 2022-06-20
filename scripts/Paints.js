@@ -1,4 +1,16 @@
 
+import { getPaints, setPaints } from "./database.js"
+
+const paints = getPaints()
+document.addEventListener(
+    "change",
+    (changeEvent) => {
+        if (changeEvent.target.id === "paint") {
+            const chosenOption = changeEvent.target.value
+            setPaints(parseInt(chosenOption))
+        }
+    }
+)
 export const Paints = () => {
     let html = "<h2>Paints</h2>"
 
@@ -6,7 +18,7 @@ export const Paints = () => {
     html += `<option value="0">Select a paint color</option>`
 
     const arrayOfOptions = paints.map( (paint) => {
-        return `<option value="${pain.id}">${paint.color}</option>`
+        return `<option value="${paint.id}">${paint.color}</option>`
         }
     )
 

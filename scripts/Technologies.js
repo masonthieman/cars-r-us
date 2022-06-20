@@ -1,5 +1,16 @@
+import { getTechnologies, setTechnology } from "./database.js"
 
-export const Technologies = () => {
+const techs = getTechnologies()
+
+document.addEventListener(
+    "change",
+    (changeEvent) => {
+        if (changeEvent.target.id === "tech") {
+            const chosenOption = changeEvent.target.value
+            setTechnology(parseInt(changeEvent.target.value))
+        }
+    }
+)
     export const Technologies = () => {
         let html = "<h2>Technologies</h2>"
     
@@ -12,6 +23,5 @@ export const Technologies = () => {
     
         html += "</select>"
         return html
-        `
+        
     }
-}
