@@ -18,8 +18,10 @@ export const Wheels = () => {
             ${
                 wheels.map(
                     (wheel) => {
-                        return `<option value="${wheel.id}">${wheel.type}`
+                        return `<option value="${wheel.id}">${wheel.type}</option>`
                     }
                 )
-            }`
+            }
+        </select>`
+        
 }
