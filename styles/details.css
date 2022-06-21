@@ -1,0 +1,6 @@
+.choices {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 1rem 10rem;
+}
